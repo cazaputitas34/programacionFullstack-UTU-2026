@@ -1,84 +1,177 @@
 <!DOCTYPE html>
 <html lang="es">
+<head>
     <style>
-  body {
-    text-align: center;
-    position: relative;
-    }
-    body::before {
-    content: '';
-    position: fixed;
-    inset: 0;
-    background-image: url('https://www.xtrafondos.com/wallpapers/the-legend-of-zelda-breath-of-the-wild-4066.jpg');
-    background-size: cover;
-    background-position: center;
-    filter: blur(3px);
-    transform: scale(1.05);
-    z-index: -1;
+        body {
+            text-align: center;
+            position: relative;
+        }
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image: url("fondo.webp");
+            background-size: cover;
+            background-position: center;
+            filter: blur(3px);
+            transform: scale(1.05);
+            z-index: -1;
+        }
 
-    }
-    </style> 
+        /* Top 3 - tamaños distintos para mostrar el ranking */
+        .top1 { font-size: 2em; color: gold; }
+        .top2 { font-size: 1.5em; color: silver; }
+        .top3 { font-size: 1.1em; color: #cd7f32; }
+
+        /* Tabla */
+        table {
+            margin: 0 auto;
+            border-collapse: collapse;
+            background-color: rgba(255,255,255,0.85);
+        }
+        th, td {
+            border: 1px solid #333;
+            padding: 8px 16px;
+        }
+        th {
+            background-color: #333;
+            color: white;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            padding: 10px;
+            text-align: left;
+        }
+    </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio 2</title>
-    </head>
+</head>
 <body>
-        <header id="inicio">
-      <h1>Bueeeeeno!</h1>
-      <p>Cosas que recomiendo</p>
-      <nav>
-        <a href="#inicio">Inicio</a>
-        <a href="#recomendaciones">Recomendaciones</a>
-        <a href="#probar">Cosas a probar</a>
-        <a href="#youtube">Mi canál</a>
-      </nav>
-    </header>
-    <header>
-    <p>________________________________________________________________________________________________________________</P>
-    <header>
-      <h1>Mis Recomendaciones</h1>
-      <p>Películas, juegos, series y más</p>
-    </header>    
-    <section id="recomendaciones">
 
+    <header id="inicio">
+        <h1>Bueeeeeno!</h1>
+        <p>Cosas que recomiendo</p>
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#recomendaciones">Recomendaciones</a>
+            <a href="#probar">Cosas a probar</a>
+            <a href="#youtube">Mi canál</a>
+        </nav>
+    </header>
+
+    <hr>
+
+    <header>
+        <h1>Mis Recomendaciones</h1>
+        <p>Películas, juegos, series y más</p>
+    </header>
+
+    <section id="recomendaciones">
         <h2>Videojuegos y Libros</h2>
         <ul>
-          <li>Si te gustan los juegos de aventura recomiendo jugar The Legend of Zelda: Breath of the Wild</li>
-          <li>El único libro que me pareció interesante es el Diario 3 de Gravity Falls y el Libro de Bills</li>
+            <li>Si te gustan los juegos de aventura recomiendo jugar The Legend of Zelda: Breath of the Wild</li>
+            <li>El único libro que me pareció interesante es el Diario 3 de Gravity Falls y el Libro de Bills</li>
         </ul>
+
         <h2>Películas y Series</h2>
         <ul>
-          <li>Recomiendo ver sí o sí Son como niños 1 o 2</li>
-          <li>La mejor serie que he visto es Dexter la serie de 2006</li>
-        <p>________________________________________________________________________________________________________________</P>
-            <article>
-        <h3>Mi recomendación especial: Dexter</h3>
-        <p>Dexter es una de las mejores series según yo, la historia sobre un analista forense que de noche caza asesinos o abusadores es muy buena. (Muy resumido)</p>
+            <li>Recomiendo ver sí o sí Son como niños 1 o 2</li>
+            <li>La mejor serie que he visto es Dexter la serie de 2006</li>
+        </ul>
+
+        <article>
+            <h3>Mi recomendación especial: Dexter</h3>
+            <p>Dexter es una de las mejores series según yo, la historia sobre un analista forense que de noche caza asesinos o abusadores es muy buena. (Muy resumido)</p>
             <img src="https://fotografias-2.larazon.es/assets/tecnologia-consumo/2025/04/dexter-resurrection.jpg?width=1900&height=1069" height="240" width="420">
-            </article>
+        </article>
+    </section>
+
+    <hr>
+
+    <!-- el top 3 de lo que recomiendo -->
+    <section id="top3">
+        <h2>🏆 Mi top 3 de mejores recomendaciones para mí</h2>
+        <p class="top1">🥇 1° Dexter (2006)</p>
+        <p class="top2">🥈 2° The Legend of Zelda: Breath of the Wild</p>
+        <p class="top3">🥉 3° Son como niños 1 o 2</p>
+    </section>
+
+    <hr>
+
+    <!-- la tabla comparativa de las cosas que recomiendo -->
+    <section id="tabla">
+        <h2>Tabla Comparativa</h2>
+        <table>
+            <tr>
+                <th>Título</th>
+                <th>Tipo</th>
+                <th>Género</th>
+                <th>¿La recomiendo?</th>
+            </tr>
+            <tr>
+                <td>Dexter</td>
+                <td>Serie</td>
+                <td>Buena historia / Suspenso</td>
+                <td>La recomiendo mucho si sos de mirar muchas series sobre el mismo estilo (por ejemplo "You")</td>
+            </tr>
+            <tr>
+                <td>Son como niños 1 y 2</td>
+                <td>Películas</td>
+                <td>Comedia</td>
+                <td>Cualquiera de las dos son en mi opinion las mejores pelis de comedia</td>
+            </tr>
+            <tr>
+                <td>Zelda: Breath of the Wild</td>
+                <td>Videojuego</td>
+                <td>Aventura / Mundo abierto</td>
+                <td>El mejor juego de Mundo Abierto jamàs creado segun yo (otros dicen que es el Red Dead Redemption 2 pero no saben de juegos buenos)</td>
+            </tr>
+            <tr>
+                <td>Diario 3 de Gravity Falls</td>
+                <td>Libro</td>
+                <td>Ficción / Basado en la serie</td>
+                <td>Uno de los unicos libros que he leido en mi vida y el mejor por lejos</td>
+            </tr>
+        </table>
+    </section>
+
+    <hr>
+
+    <section id="probar">
+        <h2>Cosas que me gustaría probar</h2>
+        <p>Hay cosas que todavía no probé pero tengo muchas ganas de conocer pronto.</p>
+        <ul>
+            <li>Probaría la fruta del dragón que supuestamente es muy rica</li>
+            <li>Aprender a hacer videos para mi canal de YouTube</li>
         </ul>
     </section>
-    <p>________________________________________________________________________________________________________________</P>
-    <section id="probar">
-    <h2>Cosas que me gustaria probar</h2>
-    <p>Hay cosas que todavía no probé pero tengo muchas ganas de conocer pronto.</p>
-    <ul>
-      <li>Probaria la fruta del dragón que supuestamente es muy rica</li>
-      <li>Aprender a hacer videos para mi canal de YouTube</li>
-    </ul>
-    </section>
- <section id="youtube">
-      <article>
-        <h2>Mi canal de YouTube</h2>
-        <p><a href="https://www.youtube.com/@ByLuki_YT" target="_blank">ByLuki_YT</a></p>
-      </article>
-      </section>
-    </ul>
-    <p>________________________________________________________________________________________________________________</P>
 
-        <footer align="left" style="position: fixed; bottom: 0; left: 0; width: 100%; padding: 10px;">
+    <section id="youtube">
+        <article>
+            <h2>Mi canal de YouTube</h2>
+            <p><a href="https://www.youtube.com/@ByLuki_YT" target="_blank">ByLuki_YT</a></p>
+        </article>
+    </section>
+
+    <br><br><br><br>
+
+    <footer>
         <p>Lucas Cabrera</p>
         <p>2026</p>
-        </footer>
+        <!-- Mapa de san jose con iframe (tuve errores para agregarlo, me daba error de que la web no exitia 😑) -->
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52711.63903208485!2d-56.79709765244672!3d-34.338325163369134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a1770928ae3573%3A0xcb414072812fb4e!2s80000%20San%20Jos%C3%A9%20de%20Mayo%2C%20Departamento%20de%20San%20Jos%C3%A9%2C%20Uruguay!5e0!3m2!1ses!2sus!4v1773931292608!5m2!1ses!2sus"
+            width="300"
+            height="150"
+            style="border:0;"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </footer>
 
+</body>
 </html>
