@@ -6,9 +6,9 @@ ORDEN
 
 Nombre de juego (Temas)
 
-Cubiertos (Semanas)
+Cubiertos (Proyectos)
 
-Comida (Proyectos)
+Comida (Semanas)
 
 Random (Ns)
 
