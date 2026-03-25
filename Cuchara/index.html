@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hello Neighbor | TinyBuild</title>
+  <style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+ 
+    :root {
+      --bg: #0a0a0f;
+      --surface: #12121a;
+      --border: #2a2a3d;
+      --muted: #64748b;
+    }
+ 
+    body { background: var(--bg); color: #e2e8f0; font-family: sans-serif; }
+ 
+    header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 14px 32px;
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+    }
+ 
+    .logo {
+      width: 44px; height: 44px;
+
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 700;
+    }
+ 
+    .header-title { font-size: 20px; font-weight: 700; flex: 1; }
+ 
+    nav a { color: var(--muted); text-decoration: none; font-size: 14px; margin-left: 20px; }
+    nav a:hover { color: #fff; }
+ 
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 32px 24px 60px;
+      display: flex; flex-direction: column; gap: 24px;
+    }
+ 
+    .box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 24px;
+    }
+ 
+    .box h2 { font-size: 17px; margin-bottom: 10px; color: #06b6d4; }
+    .box p  { color: var(--muted); font-size: 14px; line-height: 1.7; }
+ 
+    .wallpaper {
+      height: 340px;
+      border-radius: 4px;
+      border: 1px solid var(--border);
+      overflow: hidden;
+    }
+ 
+    .wallpaper img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+ 
+    .middle-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+ 
+    .trailers { display: flex; flex-direction: column; gap: 10px; }
+ 
+    .trailer-box {
+      flex: 1;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+ 
+    .trailer-box iframe {
+      width: 100%; height: 100%;
+      min-height: 200px;
+      display: block;
+    }
+ 
+    .screenshots-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 16px;
+    }
+ 
+    .screenshots-grid img {
+      width: 100%; height: 160px;
+      object-fit: cover;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+    }
+ 
+    .steam-section { display: flex; justify-content: center; }
+ 
+    footer {
+      background: var(--surface); border-top: 1px solid var(--border);
+      padding: 20px; text-align: center; color: var(--muted); font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo"><img src="https://www.gematsu.com/wp-content/uploads/2024/11/Hello-Neighbor-3_2024_11-10-24_006.png" width="70" height="70" alt="Logo"></div>
+    <span class="header-title"> <img src="https://static.wikia.nocookie.net/hello-neighbor/images/4/48/NeighborLogo.png/revision/latest?cb=20210104215644" width="190" height="50" alt="Hello Neighbor Logo"></span>
+  </header>
+
+  <main>
+
+    <section class="wallpaper">
+      <img src="https://wallpapers.com/images/hd/hello-neighbor-1uznzw1v8totadk3.jpg" alt="Wallpaper of the game">
+    </section>
+
+    <section class="middle-grid">
+      <div class="box">
+        <h2>Info del juego</h2>
+        <p>Hello Neighbor es un videojuego de terror independiente del género de sigilo desarrollado por Dynamic Pixels y publicado por tinyBuild. El objetivo del juego es que el jugador se infiltre con éxito en el sótano de la casa de su vecino para descubrir un intrigante secreto.​ La inteligencia artificial del juego modifica el comportamiento del vecino en función de las acciones pasadas del jugador, como establecer trampas a lo largo de los caminos que el jugador siguió en un intento anterior. Una secuela, Hello Neighbor 2, fue lanzada a fines de 2022.​</p>
+        <br>
+        <p>Historia: <br> El juego fue lanzado como una versión alfa en el sitio web de Dynamic Pixels en 2015, antes de ser aprobado para su venta como un juego de acceso temprano por el programa Steam Greenlight mientras que una campaña de Kickstarter fue lanzada para financiar un mayor desarrollo, luego de lo cual el estudio firmó un acuerdo con tinyBuild para publicar el juego.​ Finalmente, el juego completo fue lanzado el 8 de diciembre de 2017 para Microsoft Windows y Xbox One.</p>
+      </div>
+
+      <div class="trailers">
+        <div class="trailer-box">
+          <iframe src="https://www.youtube.com/embed/uXq6_0wUxi0?si=vsa8NoJ31CoN3lDY" height="340" width="600" allowfullscreen></iframe>
+        </div>
+        <div class="trailer-box">
+          <iframe src="https://www.youtube.com/embed/zYHm59lDpMI?si=rv_Mjw0FsrffRnmV" height="340" width="600" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section class="box">
+      <h2>Screenshots</h2>
+      <div class="screenshots-grid">
+        <img src="https://static.wixstatic.com/media/50a395_ffd87a8e5859479e82957eaae312e274~mv2.jpg/v1/fill/w_1258,h_707,al_c,q_85,enc_auto/50a395_ffd87a8e5859479e82957eaae312e274~mv2.jpg" alt="Screenshot 1">
+        <img src="https://static.wixstatic.com/media/50a395_88421b298f764d5b88f6407161d09480~mv2.jpg/v1/fill/w_1397,h_786,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/50a395_88421b298f764d5b88f6407161d09480~mv2.jpg" alt="Screenshot 2">
+        <img src="https://static.wixstatic.com/media/50a395_f9c976eb7b3942b3ad9c719368d81491~mv2.jpg/v1/fill/w_1397,h_786,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/50a395_f9c976eb7b3942b3ad9c719368d81491~mv2.jpg" alt="Screenshot 3">
+        <img src="https://static.wixstatic.com/media/50a395_5edf3de01c3645459bc8cfdb94dbd5ee~mv2.jpg/v1/fill/w_1397,h_786,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/50a395_5edf3de01c3645459bc8cfdb94dbd5ee~mv2.jpg" alt="Screenshot 4">
+        <img src="https://static.wixstatic.com/media/50a395_6f7b345416da42d48f2bc990090e0445~mv2.jpg/v1/fill/w_1397,h_786,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/50a395_6f7b345416da42d48f2bc990090e0445~mv2.jpg" alt="Screenshot 5">
+        <img src="https://static.wixstatic.com/media/50a395_74d2ed9f13e3431fbe467cdb361733db~mv2.jpg/v1/fill/w_1397,h_786,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/50a395_74d2ed9f13e3431fbe467cdb361733db~mv2.jpg" alt="Screenshot 6">
+      </div>
+    </section>
+
+    <section class="steam-section">
+      <iframe src="https://store.steampowered.com/widget/521890/" width="630" height="190" frameborder="0"></iframe>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2026 TinyBuild and DynamicPixel — Todos los derechos reservados</p>
+  </footer>
+
+</body>
+</html>
