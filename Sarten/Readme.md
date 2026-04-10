@@ -10,3 +10,5 @@
 4. Lugares a los que fuí
 5. lo que me parecio
 6. Footer
+
+te lo subo acá y despues te hago el otro repostorio, me voy a un cumple y no me da el tiempo.
