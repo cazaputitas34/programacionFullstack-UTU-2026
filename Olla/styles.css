@@ -1,4 +1,6 @@
 body {
+  justify-content: center;
+  align-items: flex-start;
   display: flex;
   gap: 40px;
   padding: 40px;
@@ -6,7 +8,7 @@ body {
   font-family: Arial, sans-serif;
 }
 
-/* NIVEL 1 */
+/* cajitas rgb */
 .cajas {
   display: flex;
   gap: 12px;
@@ -28,26 +30,26 @@ body {
 .verde { background-color: #2e7d32; }
 .azul  { background-color: #5b8db8; }
 
-/* NIVEL 2 */
-.tarjetas {
+/* coso de servicio de programacion */
+.servicios {
   display: flex;
   flex-direction: column;
   gap: 10px;
   max-width: 400px;
 }
 
-.tarjeta {
+.servicios {
   background-color: white;
   border-left: 4px solid #aaa;
   border-radius: 4px;
   padding: 12px 16px;
 }
 
-.tarjeta h3 {
+.servicios h3 {
   margin: 4px 0 2px;
 }
 
-.tarjeta p {
+.servicios p {
   color: #666;
   font-size: 0.85rem;
 }
