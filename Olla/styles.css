@@ -1,0 +1,61 @@
+body {
+  display: flex;
+  gap: 40px;
+  padding: 40px;
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+}
+
+/* NIVEL 1 */
+.cajas {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.caja {
+  width: 90px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.rojo  { background-color: #e8523a; }
+.verde { background-color: #2e7d32; }
+.azul  { background-color: #5b8db8; }
+
+/* NIVEL 2 */
+.tarjetas {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+}
+
+.tarjeta {
+  background-color: white;
+  border-left: 4px solid #aaa;
+  border-radius: 4px;
+  padding: 12px 16px;
+}
+
+.tarjeta h3 {
+  margin: 4px 0 2px;
+}
+
+.tarjeta p {
+  color: #666;
+  font-size: 0.85rem;
+}
+
+.badge {
+  background-color: #5b8db8;
+  color: white;
+  font-size: 0.7rem;
+  padding: 4px 8px;
+  border-radius: 3px;
+}
