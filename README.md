@@ -6,7 +6,7 @@ ORDEN
 
 Nombre de juego (Temas)
 
-Cubiertos (Proyectos)
+Cubiertos (Ejercicios)
 
 Comida (Semanas)
 
