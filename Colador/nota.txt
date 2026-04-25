@@ -1,0 +1,4 @@
+7
+
+Nivel 1 - No posicionado los  ✔, ✖ , iban en las esquinas
+
