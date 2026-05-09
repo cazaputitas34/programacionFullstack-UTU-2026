@@ -1,0 +1,5 @@
+7
+
+Bien estructurado desde html, Estilos generales bien.
+
+Peor no hay diferenciacion de estilos entre secciones como pide la letra.
