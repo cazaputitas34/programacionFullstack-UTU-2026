@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ejercicio 10</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+<div class="container py-5" style="max-width:500px">
+
+  <h1 id="titulo" class="mb-3">Hola 👋</h1>
+  <button class="btn btn-outline-secondary btn-sm mb-4" id="btnTitulo">Cambiar título</button>
+
+  <p id="parrafo">Este es un párrafo normal.</p>
+  <button class="btn btn-outline-secondary btn-sm mb-4" id="btnParrafo">Cambiar párrafo</button>
+
+  <img id="imagen" src="https://placehold.co/500x150/e9ecef/adb5bd?text=Imagen" class="img-fluid rounded mb-2"/>
+  <br/>
+  <button class="btn btn-outline-secondary btn-sm mb-4" id="btnImagen">Cambiar imagen</button>
+
+  <p id="salidaMensaje" class="text-muted"></p>
+  <button class="btn btn-outline-secondary btn-sm mb-4" id="btnMostrar">Mostrar mensaje</button>
+
+  <p id="parrafoClase" class="p-2 rounded mb-2">Este párrafo cambia de estilo.</p>
+  <button class="btn btn-outline-secondary btn-sm me-2" id="btnAgregar">+ Clase</button>
+  <button class="btn btn-outline-secondary btn-sm mb-4" id="btnQuitar">− Clase</button>
+
+  <ul id="lista" class="list-unstyled"></ul>
+  <button class="btn btn-outline-secondary btn-sm mb-4" id="btnItem">+ Lista</button>
+
+  <button class="btn btn-outline-dark btn-sm mb-4" id="btnDark">🌙 Modo oscuro</button>
+
+  <hr/>
+
+  <input type="text" id="fNombre" class="form-control mb-1" placeholder="Nombre"/>
+  <div id="errNombre" class="text-danger small mb-2"></div>
+  <input type="text" id="fColor" class="form-control mb-1" placeholder="Color favorito"/>
+  <div id="errColor" class="text-danger small mb-2"></div>
+  <textarea id="fMensaje" class="form-control mb-1" rows="2" placeholder="Mensaje"></textarea>
+  <div id="errMensaje" class="text-danger small mb-3"></div>
+  <button class="btn btn-dark btn-sm" id="btnEnviar">Enviar</button>
+
+  <div id="tarjetas" class="mt-4"></div>
+
+</div>
+<script src="script.js"></script>
+</body>
+</html>
