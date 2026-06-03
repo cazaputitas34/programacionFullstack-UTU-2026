@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.contenedor {
+  display: flex;
+  gap: 12px;
+}
+
+.btn {
+  padding: 9px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.btn:hover {
+  opacity: 0.7;
+  transform: scale(1.07);
+}
+
+.btn-aceptar {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+.btn-cancelar {
+  background-color: #ffc107;
+  color: #333;
+}
+
+.btn-eliminar {
+  background-color: #f44336;
+  color: #fff;
+}

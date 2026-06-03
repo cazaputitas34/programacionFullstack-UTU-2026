@@ -1,0 +1,17 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Live Server - Granny",
+			"type": "shell",
+			"command": "npx",
+			"args": [
+				"live-server",
+				"Granny",
+				"--port=5500"
+			],
+			"isBackground": true,
+			"group": "build"
+		}
+	]
+}

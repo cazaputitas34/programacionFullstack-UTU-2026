@@ -1,0 +1,9 @@
+4
+
+Confundís algunas estructuras, especialmente sections con el footer.
+
+Recordá que el footer es el pie de la página y generalmente se ubica al final del contenido. También puede utilizarse dentro de otras secciones como cierre de bloques específicos.
+
+Por otro lado, las sections son partes de la página que agrupan contenido relacionado entre sí.
+
+Es importante seguir reforzando la diferencia entre estos elementos.
