@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mi Colección Favorita</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <h1>Mi Colección Favorita</h1>
+  <p class="descripcion">Guarda tus videojuegos, películas y series</p>
+
+  <div class="barrita-tema">
+    <span id="contador">Elementos agregados: 0</span>
+    <button id="btn-modo" onclick="toggleModo()">Modo claro</button>
+  </div>
+
+  <!-- FORMULARIO -->
+  <form onsubmit="agregar(event)">
+    <h2>Agregar elemento</h2>
+
+    <label for="nombre">Nombre *</label>
+    <input type="text" id="nombre" placeholder="Ej: The Last of Us" />
+
+    <label for="desc">Descripción</label>
+    <input type="text" id="desc" placeholder="Ej: Aventura post-apocalíptica" />
+
+    <label for="tipo">Tipo</label>
+    <select id="tipo">
+      <option value="Videojuego">Videojuego</option>
+      <option value="Película">Película</option>
+      <option value="Serie">Serie</option>
+      <option value="Otro">Otro</option>
+    </select>
+
+    <label for="estado">Estado</label>
+    <select id="estado">
+      <option value="Pendiente">Pendiente</option>
+      <option value="En progreso">En progreso</option>
+      <option value="Terminado">Terminado</option>
+    </select>
+
+    <label for="cal">Calificación (1–5) *</label>
+    <input type="number" id="cal" min="1" max="5" placeholder="Ej: 4" />
+
+    <label for="img">Imagen (URL)</label>
+    <input type="url" id="img" placeholder="https://..." />
+
+    <p id="error">El nombre es obligatorio y la calificación debe ser entre 1 y 5.</p>
+
+    <button type="submit" id="btn-agregar">Agregar</button>
+  </form>
+
+  <!-- FILTROS -->
+  <div class="filtros">
+    <button class="activo" data-f="Todos"       onclick="filtrar(this)">Todos</button>
+    <button data-f="Videojuego"  onclick="filtrar(this)">Videojuegos</button>
+    <button data-f="Película"    onclick="filtrar(this)">Películas</button>
+    <button data-f="Serie"       onclick="filtrar(this)">Series</button>
+    <button data-f="Pendiente"   onclick="filtrar(this)">Pendientes</button>
+    <button data-f="En progreso" onclick="filtrar(this)">En progreso</button>
+    <button data-f="Terminado"   onclick="filtrar(this)">Terminados</button>
+  </div>
+
+  <p id="vacio">Tu colección está vacía. ¡Agrega tu primer elemento!</p>
+  <div id="tarjetas"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
