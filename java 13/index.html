@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Chistes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Generador de Chistes</h1>
+
+  <select id="categoria">
+    <option value="Any">Cualquier categoría</option>
+    <option value="Programming">Programación</option>
+    <option value="Pun">Juegos de palabras</option>
+    <option value="Misc">Misceláneos</option>
+  </select>
+
+  <select id="idioma">
+    <option value="es">Español</option>
+    <option value="en">Inglés</option>
+  </select>
+
+  <button onclick="traerChiste()">Generar chiste</button>
+
+  <div id="chiste">El chiste aparecerá acá...</div>
+  <div id="error"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
