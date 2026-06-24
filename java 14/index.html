@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gatos Aleatorios</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+    <h1>Gatos Aleatorios</h1>
+
+    <button id="btn-traer" onclick="traerGato()">Traer gato</button>
+
+    <div id="contenedor-imagen">
+      <p id="placeholder">Presioná el botón para ver un gato</p>
+      <img id="imagen-gato" src="" alt="Gato" style="display:none;" />
+    </div>
+
+    <div id="votacion" style="display:none;">
+      <button id="btn-me-gusta" onclick="votar(1)">Me gusta</button>
+      <button id="btn-no-me-gusta" onclick="votar(-1)">No me gusta</button>
+    </div>
+
+    <div class="contadores">
+      <p>Votos positivos: <span id="positivos">0</span></p>
+      <p>Votos negativos: <span id="negativos">0</span></p>
+    </div>
+
+    <p id="mensaje"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
