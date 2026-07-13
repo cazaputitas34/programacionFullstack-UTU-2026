@@ -159,6 +159,7 @@ async function loadProducts(categoriaElegida, botonElegido) {
         tituloSeccion.innerText = "Todos los Productos";
     }
 
+
     try {
         var respuesta = await fetch(endpoint);
         var productos = await respuesta.json();

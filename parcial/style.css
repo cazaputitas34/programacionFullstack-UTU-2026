@@ -262,6 +262,7 @@
         }
         .btn:hover { background-color: var(--accent-hover); }
 
+
         /* Formulario Login */
         .login-box input {
             width: 100%; padding: 10px; margin-bottom: 12px;
