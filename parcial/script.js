@@ -181,7 +181,7 @@ function renderCatalog(productos) {
     }
 }
 
-// Crea una tarjeta (card) para un producto y la agrega al catálogo
+// vari del producto activo para que no se cambie la descripcion si se traduce mientras se ve otro producto
 function crearTarjetaDeProducto(producto, catalogo) {
     var tarjeta = document.createElement('div');
     tarjeta.className = 'card';
@@ -198,24 +198,28 @@ function crearTarjetaDeProducto(producto, catalogo) {
         '  </div>' +
         '</div>';
 
-    // Botón "Ver más"
+    // vari del boton de "ver mas"
     var botonVerMas = tarjeta.querySelector('.buy-btn');
     botonVerMas.addEventListener('click', function (evento) {
         evento.stopPropagation();
         openProductDetails(producto);
     });
 
-    // Toda la tarjeta también es clickeable
+    // tarjeta clickeable de los productos
     tarjeta.addEventListener('click', function () {
         openProductDetails(producto);
     });
 
     catalogo.appendChild(tarjeta);
 
-    // Traducimos el título en segundo plano (la tarjeta ya se ve mientras tanto)
+    // api de mierda traduce el titulo del producto, si funciona como el culo (siempre) no lo traduce y se mantiene en idioma original
     translateText(producto.title).then(function (tituloTraducido) {
+        // cambia el titulo del producto en el objeto y en la tarjeta
         producto.title = tituloTraducido;
+        // busca el .card-title dentro, si no lo encuentra tira "null"
         var elementoTitulo = tarjeta.querySelector('.card-title');
+        // chequea si el var elementoTitulo no dice null y si lo hace muestra el titulo no traducido
+        // sino diria "Cannot set property 'textContent' of null" y se rompe todo
         if (elementoTitulo) {
             elementoTitulo.textContent = tituloTraducido;
             elementoTitulo.title = tituloTraducido;
@@ -224,26 +228,27 @@ function crearTarjetaDeProducto(producto, catalogo) {
 }
 
 
-// ==========================================
-// MODAL DE DETALLE DE PRODUCTO
-// ==========================================
+// los modals de los productos (la desc de cada uno)
+
+// guarda el producto que se esta viendo para que no se borre el cache de la traduccion
 function openProductDetails(producto) {
     activeProduct = producto;
-
+    // le pone los datos del modal al producto que se esta viendo
     document.getElementById('modalImg').src = producto.image;
     document.getElementById('modalTitle').innerText = producto.title;
     document.getElementById('modalDesc').innerText = producto.description;
     document.getElementById('modalPrice').innerText = "$" + producto.price.toFixed(2);
 
+    // le da la funcion al "agregar al carrito" para agregar al carrito https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT43xkfpGFkjRQfMogyE40KEPeRt73-XfGsVpBQreVDZ0OeSMLkjcAOsC8&s=10
     var botonAgregar = document.getElementById('addToCartBtn');
     botonAgregar.onclick = function () {
         addToCart(producto);
         closeModal('productModal');
     };
-
+    // agregado por claude para solucionar un error con la info del producto
     openModal('productModal');
 
-    // Traducimos la descripción solo la primera vez que se abre este producto
+    // "fix" dado por claude para la api de mierda que a veces no traduce la descripcion y se queda en ingles, si falla la api de mierda no traduce nada
     if (!producto._descTranslated) {
         document.getElementById('modalDesc').innerText = "Traduciendo descripción...";
 
@@ -251,7 +256,7 @@ function openProductDetails(producto) {
             producto.description = descripcionTraducida;
             producto._descTranslated = true;
 
-            // Solo actualizamos el texto si seguimos viendo el mismo producto
+            // se actualiza el texto si se ve el producto
             if (activeProduct === producto) {
                 document.getElementById('modalDesc').innerText = descripcionTraducida;
             }
@@ -259,27 +264,27 @@ function openProductDetails(producto) {
     }
 }
 
-
-
-// Usuario y contraseña obligatorios para poder entrar
+// usuario obligatorio para entrar
 var USUARIO_CORRECTO = "mor2314";
 var CONTRASENA_CORRECTA = "83r5^";
 
+// se chequea si se escritó bien el user y contra
 function handleLogin() {
     var username = document.getElementById('usernameInput').value.trim();
     var password = document.getElementById('passwordInput').value.trim();
-
+    
+    // se muestra en la ventana del inicio de sesion si no se escribio el usuario o la contraseña
     if (!username || !password) {
         alert("Escribe tu usuario y contraseña.");
         return;
     }
-
+    // si no le pegaste al perro con la contra te caga a pedo la web
     if (username !== USUARIO_CORRECTO || password !== CONTRASENA_CORRECTA) {
-        alert("Usuario o contraseña incorrectos.");
+        alert("No lo escritastes bien");
         return;
     }
 
-    // Guardamos el usuario en el navegador
+    // se guarda en la cache del navegador
     localStorage.setItem('cyber_token', 'demo-token');
     localStorage.setItem('cyber_username', username);
 
@@ -287,7 +292,7 @@ function handleLogin() {
     loadUserProfile();
 }
 
-// Muestra el nombre de usuario guardado en la esquina de arriba
+// se visualiza el name arriba derecha
 function loadUserProfile() {
     var username = localStorage.getItem('cyber_username');
     if (!username) {
@@ -296,7 +301,7 @@ function loadUserProfile() {
 
     document.getElementById('authBox').innerHTML =
         '<div class="user-profile">' +
-        '  <span>👾 Hola, <b>' + username + '</b></span>' +
+        '  <span>Hola, <b>' + username + '</b></span>' +
         '  <button class="remove-item" onclick="logout()" style="font-size:12px;">[Salir]</button>' +
         '</div>';
 }
@@ -308,11 +313,10 @@ function logout() {
 }
 
 
-// ==========================================
-// SISTEMA DEL CARRITO DE COMPRAS
-// ==========================================
+// carrito de compras
+
 function addToCart(producto) {
-    // Buscamos si el producto ya está en el carrito
+    // se busca si el producto ya esta en el carro
     var yaEstaEnCarrito = null;
     for (var i = 0; i < cart.length; i++) {
         if (cart[i].id === producto.id) {
@@ -322,18 +326,19 @@ function addToCart(producto) {
     }
 
     if (yaEstaEnCarrito) {
-        // Si ya está, solo sumamos uno a la cantidad
+        // si ya está, solo se suma uno
         yaEstaEnCarrito.quantity = yaEstaEnCarrito.quantity + 1;
     } else {
-        // Si no está, lo agregamos como nuevo con cantidad 1
+        // i no está, se agrega como nuevo
         var nuevoItem = Object.assign({}, producto);
         nuevoItem.quantity = 1;
         cart.push(nuevoItem);
     }
-
+    // guarda el carrito
     saveCart();
 }
 
+// filtra el carrito para eliminar el producto con el id que se le pasa
 function removeFromCart(idProducto) {
     var nuevoCarrito = [];
     for (var i = 0; i < cart.length; i++) {
@@ -344,14 +349,14 @@ function removeFromCart(idProducto) {
     cart = nuevoCarrito;
     saveCart();
 }
-
+// vuelve a guardar el carrito en la cache
 function saveCart() {
     localStorage.setItem('cyber_cart', JSON.stringify(cart));
     updateCartUI();
 }
 
 function updateCartUI() {
-    // Contamos cuántos productos hay en total (sumando cantidades)
+    // cuenta la cantidad de productos en el carrito y lo muestra en el header
     var totalProductos = 0;
     for (var i = 0; i < cart.length; i++) {
         totalProductos = totalProductos + cart[i].quantity;
@@ -361,14 +366,14 @@ function updateCartUI() {
     var contenedor = document.getElementById('cartItemsContainer');
     var elementoTotal = document.getElementById('cartTotal');
 
-    // Si el carrito está vacío, mostramos un mensaje y terminamos
+    // si el carrito esta vacio, muestra un mensaje y el total en $0
     if (cart.length === 0) {
         contenedor.innerHTML = '<p style="color:var(--text-muted); text-align:center; padding: 20px 0;">El carrito está vacío.</p>';
         elementoTotal.innerText = "$0.00";
         return;
     }
 
-    // Armamos el HTML de cada producto del carrito y sumamos el total
+    // si hay productos en el carrito, los muestra y calcula el total
     var totalPrecio = 0;
     var htmlCarrito = "";
 
@@ -402,9 +407,7 @@ function checkoutCart() {
 }
 
 
-// ==========================================
-// CONTROLADORES DE MODALES (ventanas emergentes)
-// ==========================================
+// controlador agregado por claude para abrir y cerrar los modals de los productos y del login, para que no se rompa la web si se hace click afuera del modal
 function openModal(id) {
     document.getElementById(id).classList.add('active');
 }
