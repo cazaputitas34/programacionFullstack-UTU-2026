@@ -1,7 +1,9 @@
 <div align="center">
 
-![Banner](https://capsule-render.vercel.app/api?type=waving&color=0:6a11cb,100:2575fc&height=200&section=header&text=Repositorio%20de%20Ejercicios&fontSize=40&fontColor=ffffff&animation=fadeIn&desc=HTML%20%C2%B7%20CSS%20%C2%B7%20Java%20%C2%B7%20PHP&descSize=18&descAlignY=65)
+([![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&center=true&width=435&lines=Repositorio+de+Ejercicio)](https://git.io/typing-svg))
 
+
+![Banner]
 </div>
 
 Este repositorio reúne ejercicios prácticos y proyectos desarrollados a lo largo del curso, entre ellos trabajos de **HTML**, **CSS**, **Java** y **PHP**, junto con algunos recursos y notas adicionales.
