@@ -1,13 +1,13 @@
 <?php
 
-echo "Bloque 3 \n";
+echo "Bloque 4 \n";
 
-$edad = 20;
+$numero = -12;
 
-echo "Tienes: $edad años \n";
-
-if ($edad >= 18) {
-    echo "Eres mayor de edad \n";
+if ($numero > 0) {
+    echo "El numero es positivo";
+} elseif ($numero < 0) {
+    echo "El numero es negativo";
 } else {
-    echo "Eres menor de edad \n";
+    echo "El numero es cero";
 }

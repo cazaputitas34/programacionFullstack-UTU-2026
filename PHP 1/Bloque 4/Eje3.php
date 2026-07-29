@@ -1,18 +1,11 @@
 <?php
 
-echo "Bloque 3 \n";
+echo "Bloque 4 \n";
 
-$numero = 10;
-$texto = "10";
+$numero = 41;
 
-if ($numero == $texto) {
-    echo "Los valores son iguales \n";
+if ($numero % 2 == 0) {
+    echo "El numero es par";
 } else {
-    echo "Los valores son diferentes \n";
-}
-
-if ($numero === $texto) {
-    echo "Los valores y tipos son iguales \n";
-} else {
-    echo "Los valores o tipos son diferentes \n";
+    echo "El numero es impar";
 }

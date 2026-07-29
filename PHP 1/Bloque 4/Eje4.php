@@ -1,31 +1,19 @@
 <?php
 
-echo "Bloque 3 \n";
+echo "Bloque 4 \n";
 
-$stockdisponible = 10;
-$cantidadsoli = 5;
-$precio = 100;
-$presuesto = 500;
+$nota = 7;
 
-$costototal = $cantidadsoli * $precio;
-
-
-if ($cantidadsoli <= $stockdisponible) {
-    echo "Hay stock disponible \n";
-}  else {
-    echo "No hay stock disponible \n";
-}
-
-
-if ($costototal <= $presuesto) {
-    echo "El presupuesto es suficiente \n";
-}  else {
-    echo "El presupuesto no es suficiente \n";
-}
-
-
-if ($cantidadsoli <= $stockdisponible && $costototal <= $presuesto) {
-    echo "Se puede realizar la compra \n";
-}  else {
-    echo "No se puede realizar la compra \n";
+if ($nota < 1 || $nota > 12) {
+    echo "Nota invalida";
+} elseif ($nota < 4) {
+    echo "Insuficiente";
+} elseif ($nota < 6) {
+    echo "Suficiente";
+} elseif ($nota < 8) {
+    echo "Bien";
+} elseif ($nota < 10) {
+    echo "Notable";
+} else {
+    echo "Sobresaliente";
 }
