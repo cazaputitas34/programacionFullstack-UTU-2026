@@ -1,12 +1,7 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:6a11cb,100:2575fc&height=220&section=header" width="100%"/>
+![Banner](https://capsule-render.vercel.app/api?type=waving&color=0:6a11cb,100:2575fc&height=220&section=header&text=Repositorio%20de%20Ejercicios&fontSize=42&fontColor=ffffff&animation=twinkling&fontAlignY=35&desc=HTML%20%C2%B7%20CSS%20%C2%B7%20Java%20%C2%B7%20PHP&descSize=18&descAlignY=55&descAlign=50)
 
-<div style="margin-top:-170px;">
-
-![Typing SVG](https://readme-typing-svg.demolab.com?font=Poppins&size=32&pause=1000&color=FFFFFF&center=true&vCenter=true&width=600&lines=Repositorio+de+Ejercicios;HTML+%C2%B7+CSS+%C2%B7+Java+%C2%B7+PHP)
-
-</div>
 </div>
 
 Este repositorio reúne ejercicios prácticos y proyectos desarrollados a lo largo del curso, entre ellos trabajos de **HTML**, **CSS**, **Java** y **PHP**, junto con algunos recursos y notas adicionales.
