@@ -1,4 +1,5 @@
 <?php
+
 echo "Bloque 10 \n";
 
 function calcularTotal($precio, $cantidad) {
